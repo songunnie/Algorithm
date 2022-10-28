@@ -26,7 +26,7 @@ class Solution {
     }
 }
 
-//Intstream 이용한 풀이
+//IntStream 이용한 풀이
 import java.util.stream.IntStream;
 
 class Solution {
