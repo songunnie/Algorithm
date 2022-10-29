@@ -4,7 +4,7 @@ class Solution {
         String str = my_string.replaceAll("[^0-9]","");
         int[] answer = new int[str.length()];
         for(int i=0; i<=str.length()-1; i++) {
-            answer[i] = (int)str.charAt(i) - 48;
+            answer[i] = str.charAt(i) - 48;
             //48이 0의 아스키 코드인거임
         }
         
