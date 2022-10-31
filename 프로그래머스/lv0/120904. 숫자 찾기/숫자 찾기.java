@@ -17,3 +17,14 @@ class Solution {
         return -1;
     }
 }
+
+//..왜 .valueOf() 쓸 생각을 못했는지요...ㅠㅠ!! 공부하자.
+class Solution {
+    public int solution(int num, int k) {
+        String numStr = String.valueOf(num);
+        String kStr = String.valueOf(k);
+
+        int answer = numStr.indexOf(kStr);
+        return answer < 0 ? -1 : answer + 1 ;
+    }
+}
