@@ -1,19 +1,15 @@
-import java.util.Arrays;
-import java.lang.Math;
-
+import java.util.*;
 class Solution {
     public int solution(int[] array, int n) {
-        int answer = 0;
-        int a = 100;
-        int b = 0;
         Arrays.sort(array);
-        for(int i = 0; i < array.length; i++) {
-            b = Math.abs(array[i] - n);
-            if (b < a) {
-                answer = array[i];
-                a = b;
+        int answer = Math.abs(array[0]-n);
+        int num = array[0];
+        for(int i=1; i<=array.length-1; i++) {
+            if(answer > Math.abs(array[i]-n)) {
+                answer = Math.abs(array[i]-n);
+                num=array[i];
             }
         }
-        return answer;
+        return num;
     }
 }
