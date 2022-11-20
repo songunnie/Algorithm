@@ -1,22 +1,21 @@
-import java.util.ArrayList;
-import java.util.Collections;
 class Solution {
     public String solution(String s) {
-        StringBuffer sb = new StringBuffer();
-        String[] trans = s.split("");
-        ArrayList<String> arr = new ArrayList<>();
-        for (int i=0; i<trans.length; i++) {
-            if(!arr.contains(trans[i])) {
-                arr.add(trans[i]);
+        String answer = "";
+        int[] cnt = new int[26];
+        
+        for (int i = 0; i < 26; i++) {
+            cnt[i] = 0;
+        }
+        
+        for (int i = 0; i < s.length(); i++) {
+            cnt[s.charAt(i) - 97] += 1;
+        }
+        
+        for (int i = 0; i < 26; i++) {
+            if (cnt[i] == 1) {
+                answer += (char)(i + 97);
             }
         }
-        Collections.sort(arr);
-        for(int i=0; i<arr.size(); i++) {
-            String tmp = arr.get(i);
-            if(s.indexOf(tmp) == s.lastIndexOf(tmp)) {
-                sb.append(tmp);
-            }
-        }
-        return sb.toString();
+        return answer;
     }
 }
