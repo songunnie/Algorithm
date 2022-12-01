@@ -10,15 +10,11 @@ class Solution {
             for(int i=0; i<=balls-share-1; i++){
                 n*=(balls-i);
             }
-            System.out.println(n);
             for(int i=balls-share; i>=1; i--) {
                 m*=i;
             }
-            System.out.println(m);
-
             answer = (int)Math.round(n/m);
-        }
-        
+        }   
         return answer;
     }
 }
