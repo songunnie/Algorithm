@@ -1,6 +1,6 @@
 class Solution {
     public int solution(String[] spell, String[] dic) {
-        int answer = 0;
+        int answer = 2;
         
         for(int i=0; i<=dic.length-1; i++) {
             boolean contain = false;
@@ -16,8 +16,6 @@ class Solution {
             if(contain) {
                 answer = 1;
                 break;
-            } else {
-                answer = 2;
             }
         }
         return answer;
