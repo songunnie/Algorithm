@@ -5,11 +5,12 @@ class Solution {
         int cntP = 0;
         int cntY = 0;
         
-        char[] cArr = s.toLowerCase().toCharArray();
-        for(char c : cArr) {
-            if(c == 'p') {
+        String str = s.toLowerCase();
+        
+        for(int i=0; i<=str.length()-1; i++) {
+            if(str.charAt(i) == 'p') {
                 cntP++;
-            } else if(c == 'y') {
+            } else if(str.charAt(i) == 'y') {
                 cntY++;
             }
         }
