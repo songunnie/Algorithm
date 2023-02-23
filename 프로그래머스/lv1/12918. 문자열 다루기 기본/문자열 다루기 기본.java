@@ -7,3 +7,13 @@ class Solution {
         return true;
     }
 }
+
+// 다른사람 풀이. **정규식 사용
+import java.util.*;
+
+class Solution {
+  public boolean solution(String s) {
+        if (s.length() == 4 || s.length() == 6) return s.matches("(^[0-9]*$)");
+        return false;
+  }
+}
